@@ -42,6 +42,9 @@ const {handlePayment} = useContext(CartContext);
         if (isOnline){
           location.href = res.session.url;
         }
+        else if (isOnline){
+          navigate('/allorders')
+        }
         else {
           toast.success("Order placed successfully");
           setTimeout(()=> {
