@@ -5,6 +5,8 @@ import {Detector } from "react-detect-offline";
 import {HelmetProvider } from 'react-helmet-async';
 import { lazy, Suspense } from 'react';
 
+import FetchData from './components/FetchData/FetchData';
+
 // import Layout from './components/Layout/Layout';
 // import Home from './components/Home/Home';
 // import Products from './components/Products/Products';
@@ -51,6 +53,7 @@ const AuthContextProvider = lazy(()=> import('./Context/AuthContext'));
 const CartContextProvider = lazy(()=> import('./Context/CartContext'));
 const WishlistContextProvider = lazy(()=> import('./Context/WishlistContext'));
 const ProtectedRoutes = lazy(()=> import('./components/ProtectedRoutes/ProtectedRoutes'));
+import FetchData from './components/FetchData/FetchData';
 
 
 const router =  createBrowserRouter([
