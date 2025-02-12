@@ -18,6 +18,7 @@ export default function MyOrders() {
     try {
       const { data } = await axios.get(`https://ecommerce.routemisr.com/api/v1/orders/user/${userId}`);
       setMyOrders(data);
+      Navigate('/allorders')
       setApiError(null);
       // console.log(data);
     } catch (error) {
