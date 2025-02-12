@@ -40,10 +40,10 @@ const {handlePayment} = useContext(CartContext);
       const res = await handlePayment(values, isOnline);
       if (res.status === 'success'){
         if (isOnline){
-          location.href = res.session.url;
+          navigate('/allorders');          
         }
         else if (isOnline){
-          navigate('/allorders')
+          location.href = res.session.url;
         }
         else {
           toast.success("Order placed successfully");
