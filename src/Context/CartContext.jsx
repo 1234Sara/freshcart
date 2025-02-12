@@ -156,8 +156,9 @@ useEffect(() => {
 
   async function handlePayment(shippingAddress, isOnline) {
     // https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=http://localhost:5173
-
-    const API_URL = isOnline ? `https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=http://localhost:5173` : `https://ecommerce.routemisr.com/api/v1/orders/${cartId}`;
+    // http://localhost:5173
+    const BASE_URL = window.location.origin; 
+    const API_URL = isOnline ? `https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=${BASE_URL}` : `https://ecommerce.routemisr.com/api/v1/orders/${cartId}`;
 
       try {
         const {data} = await axios.post(API_URL , {shippingAddress}, {headers});

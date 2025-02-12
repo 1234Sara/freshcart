@@ -5,7 +5,7 @@ import { AuthContext } from "../../Context/AuthContext";
 import { Helmet } from 'react-helmet-async';
 
 export default function MyOrders() {
-  const [myOrders, setMyOrders] = useState(null);
+  const [myOrders, setMyOrders] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [apiError, setApiError] = useState(null);
   const { userId } = useContext(AuthContext);
@@ -18,7 +18,6 @@ export default function MyOrders() {
     try {
       const { data } = await axios.get(`https://ecommerce.routemisr.com/api/v1/orders/user/${userId}`);
       setMyOrders(data);
-      Navigate('/allorders')
       setApiError(null);
       // console.log(data);
     } catch (error) {
