@@ -157,7 +157,8 @@ useEffect(() => {
   async function handlePayment(shippingAddress, isOnline) {
     // https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=http://localhost:5173
     // http://localhost:5173
-    const BASE_URL = window.location.origin; 
+    // const BASE_URL = window.location.origin; 
+    const BASE_URL = new URL(import.meta.url).origin;
     const API_URL = isOnline ? `https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=${BASE_URL}` : `https://ecommerce.routemisr.com/api/v1/orders/${cartId}`;
 
       try {
