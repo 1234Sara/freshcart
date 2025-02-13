@@ -21,6 +21,7 @@ export default function Wishlist() {
         position: "bottom-right",
         theme: "dark",
       });
+     await removeFromWishlist(productId);
     } else {
       toast.error("Error adding product to cart");
     }

@@ -53,7 +53,7 @@ const AuthContextProvider = lazy(()=> import('./Context/AuthContext'));
 const CartContextProvider = lazy(()=> import('./Context/CartContext'));
 const WishlistContextProvider = lazy(()=> import('./Context/WishlistContext'));
 const ProtectedRoutes = lazy(()=> import('./components/ProtectedRoutes/ProtectedRoutes'));
-import FetchData from './components/FetchData/FetchData';
+// import FetchData from './components/FetchData/FetchData';
 
 
 const router =  createBrowserRouter([
