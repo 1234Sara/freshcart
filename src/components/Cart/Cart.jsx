@@ -73,7 +73,7 @@ export default function Cart() {
   <>
 
   <div>
-    <h3 className='text-center py-2 text-lg font-semibold'>Total Price: <span className='text-green-500'>{cartDetails.totalCartPrice}</span></h3>
+    <h3 className='text-center py-2 text-lg font-semibold'>Total Price: <span className='text-green-500'>{cartDetails.totalCartPrice} EGP</span></h3>
     <h4 className='py-2 text-lg font-semibold text-start pb-8'>Total Number of Items: <span className='text-green-500'>{numOfCartItems}</span></h4>
 
   </div>
